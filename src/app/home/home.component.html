@@ -1,0 +1,25 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+      <h3>All Workshops</h3>
+      <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let w of workshops">
+        <!--<img height="200px" src={{dish.image}} alt={{dish.name}}>-->
+        <mat-grid-tile-footer>
+          <h1>{{w.name | uppercase}}</h1><br>
+          <p>{{w.opendate}}:{{w.opentime}}</p>
+          <p>{{w.presenter}}</p>
+          <p>{{w.description}}</p>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
